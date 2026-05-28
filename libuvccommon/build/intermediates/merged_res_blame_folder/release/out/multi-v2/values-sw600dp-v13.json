@@ -1,0 +1,136 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.jiangdg.common.libuvccommon-merged_res-10:/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/wang/Desktop/ANDROID/AndroidUSBCamera-3.3.3/libuvccommon/src/main/res/values-sw600dp/dimens.xml",
+                    "from": {
+                        "startLines": "22",
+                        "startColumns": "1",
+                        "startOffsets": "739",
+                        "endColumns": "46",
+                        "endOffsets": "784"
+                    },
+                    "to": {
+                        "startLines": "15",
+                        "startColumns": "4",
+                        "startOffsets": "965",
+                        "endColumns": "49",
+                        "endOffsets": "1010"
+                    }
+                },
+                {
+                    "source": "/Users/wang/Desktop/ANDROID/AndroidUSBCamera-3.3.3/libuvccommon/src/main/res/values-sw600dp/dimens_dialog.xml",
+                    "from": {
+                        "startLines": "5,2,4,3",
+                        "startColumns": "1,1,1,1",
+                        "startOffsets": "268,52,195,124",
+                        "endColumns": "72,71,72,70",
+                        "endOffsets": "339,122,266,193"
+                    },
+                    "to": {
+                        "startLines": "10,11,12,13",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "611,687,762,838",
+                        "endColumns": "75,74,75,73",
+                        "endOffsets": "682,757,833,907"
+                    }
+                },
+                {
+                    "source": "/Users/wang/Desktop/ANDROID/AndroidUSBCamera-3.3.3/libuvccommon/src/main/res/values-sw600dp/dimens_frame_selector.xml",
+                    "from": {
+                        "startLines": "22,23",
+                        "startColumns": "1,1",
+                        "startOffsets": "739,789",
+                        "endColumns": "49,46",
+                        "endOffsets": "787,834"
+                    },
+                    "to": {
+                        "startLines": "14,16",
+                        "startColumns": "4,4",
+                        "startOffsets": "912,1015",
+                        "endColumns": "52,49",
+                        "endOffsets": "960,1060"
+                    }
+                },
+                {
+                    "source": "/Users/wang/.gradle/caches/transforms-3/5d591f4b29318bfd43735f9f6465d098/transformed/appcompat-1.0.2/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.jiangdg.common.libuvccommon-mergeReleaseResources-8:/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/wang/Desktop/ANDROID/AndroidUSBCamera-3.3.3/libuvccommon/src/main/res/values-sw600dp/dimens.xml",
+                    "from": {
+                        "startLines": "22",
+                        "startColumns": "1",
+                        "startOffsets": "739",
+                        "endColumns": "46",
+                        "endOffsets": "784"
+                    },
+                    "to": {
+                        "startLines": "15",
+                        "startColumns": "4",
+                        "startOffsets": "965",
+                        "endColumns": "49",
+                        "endOffsets": "1010"
+                    }
+                },
+                {
+                    "source": "/Users/wang/Desktop/ANDROID/AndroidUSBCamera-3.3.3/libuvccommon/src/main/res/values-sw600dp/dimens_dialog.xml",
+                    "from": {
+                        "startLines": "5,2,4,3",
+                        "startColumns": "1,1,1,1",
+                        "startOffsets": "268,52,195,124",
+                        "endColumns": "72,71,72,70",
+                        "endOffsets": "339,122,266,193"
+                    },
+                    "to": {
+                        "startLines": "10,11,12,13",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "611,687,762,838",
+                        "endColumns": "75,74,75,73",
+                        "endOffsets": "682,757,833,907"
+                    }
+                },
+                {
+                    "source": "/Users/wang/Desktop/ANDROID/AndroidUSBCamera-3.3.3/libuvccommon/src/main/res/values-sw600dp/dimens_frame_selector.xml",
+                    "from": {
+                        "startLines": "22,23",
+                        "startColumns": "1,1",
+                        "startOffsets": "739,789",
+                        "endColumns": "49,46",
+                        "endOffsets": "787,834"
+                    },
+                    "to": {
+                        "startLines": "14,16",
+                        "startColumns": "4,4",
+                        "startOffsets": "912,1015",
+                        "endColumns": "52,49",
+                        "endOffsets": "960,1060"
+                    }
+                },
+                {
+                    "source": "/Users/wang/.gradle/caches/transforms-3/5d591f4b29318bfd43735f9f6465d098/transformed/appcompat-1.0.2/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    }
+                }
+            ]
+        }
+    ]
+}

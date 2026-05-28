@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/slide_out_right.xml",
+        "source": "com.jiangdg.common.libuvccommon-main-11:/anim/slide_out_right.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/abc_fade_in.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/slide_in_right.xml",
+        "source": "com.jiangdg.common.libuvccommon-main-11:/anim/slide_in_right.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/abc_tooltip_exit.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/anim/abc_tooltip_exit.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/slide_in_left.xml",
+        "source": "com.jiangdg.common.libuvccommon-main-11:/anim/slide_in_left.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/abc_tooltip_enter.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/anim/abc_tooltip_enter.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/abc_slide_in_top.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/abc_popup_exit.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/abc_fade_out.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/slide_out_left.xml",
+        "source": "com.jiangdg.common.libuvccommon-main-11:/anim/slide_out_left.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/abc_popup_enter.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/abc_slide_out_bottom.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/abc_slide_in_bottom.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/anim/abc_slide_out_top.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/anim/abc_slide_out_top.xml"
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/color-v23/abc_color_highlight_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/color-v23/abc_tint_spinner.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/color-v23/abc_tint_btn_checkable.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/color-v23/abc_tint_edittext.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/color-v23/abc_tint_seek_thumb.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/color-v23/abc_tint_switch_track.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/color-v23/abc_btn_colored_text_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/color-v23/abc_tint_default.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/color-v23/abc_tint_default.xml"
+    }
+]

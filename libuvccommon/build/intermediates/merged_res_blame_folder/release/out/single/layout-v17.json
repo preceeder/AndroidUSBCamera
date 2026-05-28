@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout-v17/preference_widget_seekbar_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout-v17/preference_widget_seekbar_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout-v17/preference_dropdown_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout-v17/preference_dropdown_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout-v17/preference_category_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout-v17/preference_category_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout-v17/preference_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout-v17/preference_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout-v17/preference_information_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout-v17/preference_information_material.xml"
+    }
+]

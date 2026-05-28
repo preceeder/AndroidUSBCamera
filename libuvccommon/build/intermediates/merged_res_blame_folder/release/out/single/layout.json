@@ -1,0 +1,262 @@
+[
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_cascading_menu_item_layout.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_cascading_menu_item_layout.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_list_menu_item_checkbox.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_tooltip.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_tooltip.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/item_picker.xml",
+        "source": "com.jiangdg.common.libuvccommon-main-11:/layout/item_picker.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_action_bar_title_item.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/select_dialog_multichoice_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/checkbox_dont_ahow_again.xml",
+        "source": "com.jiangdg.common.libuvccommon-main-11:/layout/checkbox_dont_ahow_again.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/select_dialog_singlechoice_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/preference_widget_checkbox.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout/preference_widget_checkbox.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/notification_action_tombstone.xml",
+        "source": "com.jiangdg.common.libuvccommon-core-1.0.1-4:/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/preference_dialog_edittext.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout/preference_dialog_edittext.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_action_bar_up_container.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/preference_list_fragment.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout/preference_list_fragment.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/preference_category.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout/preference_category.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_screen_toolbar.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_alert_dialog_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/select_dialog_item_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/notification_action.xml",
+        "source": "com.jiangdg.common.libuvccommon-core-1.0.1-4:/layout/notification_action.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_screen_content_include.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/notification_media_cancel_action.xml",
+        "source": "com.jiangdg.common.libuvccommon-media-1.0.0-2:/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_list_menu_item_icon.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_screen_simple.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/preference_information.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout/preference_information.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/notification_template_big_media_narrow.xml",
+        "source": "com.jiangdg.common.libuvccommon-media-1.0.0-2:/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/notification_template_big_media_narrow_custom.xml",
+        "source": "com.jiangdg.common.libuvccommon-media-1.0.0-2:/layout/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/notification_template_media.xml",
+        "source": "com.jiangdg.common.libuvccommon-media-1.0.0-2:/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/notification_template_lines_media.xml",
+        "source": "com.jiangdg.common.libuvccommon-media-1.0.0-2:/layout/notification_template_lines_media.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/notification_template_part_time.xml",
+        "source": "com.jiangdg.common.libuvccommon-core-1.0.1-4:/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_activity_chooser_view.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/notification_template_big_media_custom.xml",
+        "source": "com.jiangdg.common.libuvccommon-media-1.0.0-2:/layout/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_action_mode_bar.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/preference_widget_seekbar.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout/preference_widget_seekbar.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/preference.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout/preference.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/color_picker.xml",
+        "source": "com.jiangdg.common.libuvccommon-main-11:/layout/color_picker.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/notification_template_icon_group.xml",
+        "source": "com.jiangdg.common.libuvccommon-core-1.0.1-4:/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_alert_dialog_title_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_list_menu_item_radio.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_action_mode_close_item_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/notification_template_big_media.xml",
+        "source": "com.jiangdg.common.libuvccommon-media-1.0.0-2:/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_dialog_title_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_popup_menu_item_layout.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/color_picker_dialog.xml",
+        "source": "com.jiangdg.common.libuvccommon-main-11:/layout/color_picker_dialog.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/notification_template_media_custom.xml",
+        "source": "com.jiangdg.common.libuvccommon-media-1.0.0-2:/layout/notification_template_media_custom.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/notification_template_part_chronometer.xml",
+        "source": "com.jiangdg.common.libuvccommon-core-1.0.1-4:/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/preference_dropdown.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout/preference_dropdown.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_search_view.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/list_item_bluetooth_device_info.xml",
+        "source": "com.jiangdg.common.libuvccommon-main-11:/layout/list_item_bluetooth_device_info.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/preference_recyclerview.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout/preference_recyclerview.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/expand_button.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout/expand_button.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_list_menu_item_layout.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/notification_media_action.xml",
+        "source": "com.jiangdg.common.libuvccommon-media-1.0.0-2:/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/preference_widget_switch_compat.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout/preference_widget_switch_compat.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_expanded_menu_layout.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_action_menu_item_layout.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/preference_widget_switch.xml",
+        "source": "com.jiangdg.common.libuvccommon-preference-1.0.0-5:/layout/preference_widget_switch.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_action_menu_layout.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/abc_select_dialog_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/view_frame_selector.xml",
+        "source": "com.jiangdg.common.libuvccommon-main-11:/layout/view_frame_selector.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout/seekbar_preference.xml",
+        "source": "com.jiangdg.common.libuvccommon-main-11:/layout/seekbar_preference.xml"
+    }
+]

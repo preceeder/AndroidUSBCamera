@@ -119,8 +119,9 @@ class CameraUVC(ctx: Context, device: UsbDevice) : MultiCameraClient.ICamera(ctx
             return
         }
         val request = mCameraRequest!!
-        val initialQuirks = MultiCameraClient.resolveUvcQuirks(request, mUvcOpenSlot)
+        val initialQuirks = MultiCameraClient.resolveUvcQuirks(request, mUvcOpenSlot, device.deviceId)
         var previewSize: PreviewSize? = null
+        var usedQuirks = initialQuirks
         if (!tryOpenAndPreview(cameraView, initialQuirks) { previewSize = it }) {
             val fallbackQuirks = UVCCamera.getRecommendedPlatformQuirks()
             if (request.uvcQuirks == null && fallbackQuirks != 0 && initialQuirks == 0) {
@@ -131,12 +132,14 @@ class CameraUVC(ctx: Context, device: UsbDevice) : MultiCameraClient.ICamera(ctx
                     postStateEvent(ICameraStateCallBack.State.ERROR, "open camera failed after quirks retry")
                     return
                 }
+                usedQuirks = fallbackQuirks
             } else {
                 closeCamera()
                 postStateEvent(ICameraStateCallBack.State.ERROR, "open camera failed")
                 return
             }
         }
+        MultiCameraClient.rememberUvcQuirks(device.deviceId, usedQuirks)
         isPreviewed = true
         postStateEvent(ICameraStateCallBack.State.OPENED)
         if (Utils.debugCamera) {

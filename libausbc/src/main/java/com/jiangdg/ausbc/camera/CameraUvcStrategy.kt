@@ -130,8 +130,9 @@ class CameraUvcStrategy(ctx: Context) : ICameraStrategy(ctx) {
             val previewWidth = request.previewWidth
             val previewHeight = request.previewHeight
             request.cameraId = device.deviceId.toString()
+            val quirks = MultiCameraClient.resolveUvcQuirks(request, 0, device.deviceId)
             mUVCCamera = UVCCamera().apply {
-                open(ctrlBlock, MultiCameraClient.resolveUvcQuirks(request, 0))
+                open(ctrlBlock, quirks)
             }
             if (! isPreviewSizeSupported(previewWidth, previewHeight)) {
                 postCameraStatus(CameraStatus(CameraStatus.ERROR_PREVIEW_SIZE, "unsupported preview size(${request.previewWidth}, ${request.previewHeight})"))
@@ -170,6 +171,7 @@ class CameraUvcStrategy(ctx: Context) : ICameraStrategy(ctx) {
                 }
             }
             mUVCCamera?.setFrameCallback(frameCallBack, UVCCamera.PIXEL_FORMAT_YUV420SP)
+            MultiCameraClient.rememberUvcQuirks(device.deviceId, quirks)
             Logger.i(TAG, " createCamera success! request = $request")
         }
         return true

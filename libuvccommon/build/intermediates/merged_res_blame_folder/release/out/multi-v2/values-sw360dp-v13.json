@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.jiangdg.common.libuvccommon-mergeReleaseResources-8:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/wang/.gradle/caches/transforms-3/f5c20fff26adfba39acac55fe124ee1b/transformed/preference-1.0.0/res/values-sw360dp-v13/values-sw360dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,127",
+                        "endColumns": "71,64",
+                        "endOffsets": "122,187"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.jiangdg.common.libuvccommon-merged_res-10:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/wang/.gradle/caches/transforms-3/f5c20fff26adfba39acac55fe124ee1b/transformed/preference-1.0.0/res/values-sw360dp-v13/values-sw360dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,127",
+                        "endColumns": "71,64",
+                        "endOffsets": "122,187"
+                    }
+                }
+            ]
+        }
+    ]
+}

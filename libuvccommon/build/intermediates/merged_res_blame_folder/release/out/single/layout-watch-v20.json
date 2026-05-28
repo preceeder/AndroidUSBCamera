@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout-watch-v20/abc_alert_dialog_title_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout-watch-v20/abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "com.jiangdg.common.libuvccommon-merged_res-10:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+        "source": "com.jiangdg.common.libuvccommon-appcompat-1.0.2-0:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml"
+    }
+]

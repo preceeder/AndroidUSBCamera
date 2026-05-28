@@ -954,20 +954,44 @@ class MultiCameraClient(ctx: Context, callback: IDeviceConnectCallBack?) {
         const val CAPTURE_TIMES_OUT_SEC = 3L
 
         private val sUvcOpenSlotCounter = java.util.concurrent.atomic.AtomicInteger(0)
+        private val sDeviceUvcQuirks = java.util.concurrent.ConcurrentHashMap<Int, Int>()
 
         /**
          * Resolve libuvc quirks when opening a UVC device.
          * - Explicit [CameraRequest.uvcQuirks] always wins.
+         * - Remembered quirks for [deviceId] (from a previous successful open).
+         * - 2nd+ concurrent open (slot > 0): MTK platform quirks for SP / second-stream devices.
          * - 1st concurrent open (slot 0): no quirks, keeps HP-like cameras working.
-         * - 2nd+ concurrent open: MTK platform quirks for SP / second-stream devices.
          */
         @JvmStatic
-        fun resolveUvcQuirks(cameraRequest: CameraRequest?, openSlot: Int): Int {
+        fun resolveUvcQuirks(cameraRequest: CameraRequest?, openSlot: Int, deviceId: Int = -1): Int {
             cameraRequest?.uvcQuirks?.let { return it }
+            if (deviceId >= 0) {
+                sDeviceUvcQuirks[deviceId]?.let { return it }
+            }
             if (openSlot > 0) {
                 return UVCCamera.getRecommendedPlatformQuirks()
             }
             return 0
+        }
+
+        /**
+         * Remember quirks that successfully opened preview for [deviceId].
+         * Used to skip quirks=0 retry when switching back to a device that needs bandwidth fix.
+         */
+        @JvmStatic
+        fun rememberUvcQuirks(deviceId: Int, quirks: Int) {
+            if (deviceId < 0 || quirks == 0) {
+                return
+            }
+            sDeviceUvcQuirks[deviceId] = quirks
+        }
+
+        @JvmStatic
+        fun clearRememberedUvcQuirks(deviceId: Int) {
+            if (deviceId >= 0) {
+                sDeviceUvcQuirks.remove(deviceId)
+            }
         }
 
         @JvmStatic

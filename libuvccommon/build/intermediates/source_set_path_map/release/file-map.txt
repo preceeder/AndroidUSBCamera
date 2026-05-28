@@ -1,0 +1,14 @@
+com.jiangdg.common.libuvccommon-appcompat-1.0.2-0 /Users/wang/.gradle/caches/transforms-3/5d591f4b29318bfd43735f9f6465d098/transformed/appcompat-1.0.2/res
+com.jiangdg.common.libuvccommon-coordinatorlayout-1.0.0-1 /Users/wang/.gradle/caches/transforms-3/7e2e8f2cb1f5ca8d2d92991f97e725aa/transformed/coordinatorlayout-1.0.0/res
+com.jiangdg.common.libuvccommon-media-1.0.0-2 /Users/wang/.gradle/caches/transforms-3/a9c90924391c18eda1ddfe239cbb128d/transformed/media-1.0.0/res
+com.jiangdg.common.libuvccommon-recyclerview-1.0.0-3 /Users/wang/.gradle/caches/transforms-3/abf24acd0715081475d1e46746347dac/transformed/recyclerview-1.0.0/res
+com.jiangdg.common.libuvccommon-core-1.0.1-4 /Users/wang/.gradle/caches/transforms-3/e0e231622be5c1994eb5506b8d6ddd5d/transformed/core-1.0.1/res
+com.jiangdg.common.libuvccommon-preference-1.0.0-5 /Users/wang/.gradle/caches/transforms-3/f5c20fff26adfba39acac55fe124ee1b/transformed/preference-1.0.0/res
+com.jiangdg.common.libuvccommon-pngs-6 /Users/wang/Desktop/ANDROID/AndroidUSBCamera-3.3.3/libuvccommon/build/generated/res/pngs/release
+com.jiangdg.common.libuvccommon-resValues-7 /Users/wang/Desktop/ANDROID/AndroidUSBCamera-3.3.3/libuvccommon/build/generated/res/resValues/release
+com.jiangdg.common.libuvccommon-rs-8 /Users/wang/Desktop/ANDROID/AndroidUSBCamera-3.3.3/libuvccommon/build/generated/res/rs/release
+com.jiangdg.common.libuvccommon-mergeReleaseResources-9 /Users/wang/Desktop/ANDROID/AndroidUSBCamera-3.3.3/libuvccommon/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.jiangdg.common.libuvccommon-mergeReleaseResources-10 /Users/wang/Desktop/ANDROID/AndroidUSBCamera-3.3.3/libuvccommon/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.jiangdg.common.libuvccommon-merged_res-11 /Users/wang/Desktop/ANDROID/AndroidUSBCamera-3.3.3/libuvccommon/build/intermediates/merged_res/release
+com.jiangdg.common.libuvccommon-main-12 /Users/wang/Desktop/ANDROID/AndroidUSBCamera-3.3.3/libuvccommon/src/main/res
+com.jiangdg.common.libuvccommon-release-13 /Users/wang/Desktop/ANDROID/AndroidUSBCamera-3.3.3/libuvccommon/src/release/res
