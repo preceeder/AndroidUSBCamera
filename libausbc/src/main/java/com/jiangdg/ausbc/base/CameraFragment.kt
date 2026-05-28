@@ -111,6 +111,7 @@ abstract class CameraFragment : BaseFragment(), ICameraStateCallBack {
             }
 
             override fun onDetachDec(device: UsbDevice?) {
+                device?.deviceId?.let { MultiCameraClient.clearPrimaryCameraDevice(it) }
                 mCameraMap.remove(device?.deviceId)?.apply {
                     setUsbControlBlock(null)
                 }
@@ -286,13 +287,9 @@ abstract class CameraFragment : BaseFragment(), ICameraStateCallBack {
      * @param usbDevice camera usb device
      */
     protected fun switchCamera(usbDevice: UsbDevice) {
-        getCurrentCamera()?.closeCamera()
-        try {
-            Thread.sleep(500)
-        } catch (e: Exception) {
-            e.printStackTrace()
+        getCurrentCamera()?.closeCamera {
+            requestPermission(usbDevice)
         }
-        requestPermission(usbDevice)
     }
 
     /**

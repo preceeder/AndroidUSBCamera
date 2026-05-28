@@ -51,6 +51,9 @@ class CameraUVC(ctx: Context, device: UsbDevice) : MultiCameraClient.ICamera(ctx
     }
 
     private val frameCallBack = IFrameCallback { frame ->
+        if (!isPreviewed) {
+            return@IFrameCallback
+        }
         frame?.apply {
             frame.position(0)
             val data = ByteArray(capacity())
@@ -139,7 +142,7 @@ class CameraUVC(ctx: Context, device: UsbDevice) : MultiCameraClient.ICamera(ctx
                 return
             }
         }
-        MultiCameraClient.rememberUvcQuirks(device.deviceId, usedQuirks)
+        MultiCameraClient.markPrimaryCameraIfNeeded(device.deviceId, usedQuirks, mUvcOpenSlot)
         isPreviewed = true
         postStateEvent(ICameraStateCallBack.State.OPENED)
         if (Utils.debugCamera) {
@@ -148,6 +151,18 @@ class CameraUVC(ctx: Context, device: UsbDevice) : MultiCameraClient.ICamera(ctx
     }
 
     private fun destroyUvcCamera() {
+        mUvcCamera?.apply {
+            try {
+                stopPreview()
+            } catch (e: Exception) {
+                Logger.w(TAG, "stopPreview: ${e.message}")
+            }
+            try {
+                setFrameCallback(null, UVCCamera.PIXEL_FORMAT_YUV420SP)
+            } catch (e: Exception) {
+                Logger.w(TAG, "clear frame callback: ${e.message}")
+            }
+        }
         mUvcCamera?.destroy()
         mUvcCamera = null
     }
@@ -229,6 +244,7 @@ class CameraUVC(ctx: Context, device: UsbDevice) : MultiCameraClient.ICamera(ctx
     override fun closeCameraInternal() {
         postStateEvent(ICameraStateCallBack.State.CLOSED)
         isPreviewed = false
+        mNV21DataQueue.clear()
         releaseEncodeProcessor()
         destroyUvcCamera()
         if (mUvcOpenSlot >= 0) {

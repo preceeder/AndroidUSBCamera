@@ -75,6 +75,8 @@ class RenderManager(
     private var mFBOBufferId: Int = 0
     private var mContext: Context = context
     private var mEffectList = arrayListOf<AbstractEffect>()
+    @Volatile
+    private var mReleased = false
     private var mCacheEffectList = arrayListOf<AbstractEffect>()
     private var mCaptureDataCb: ICaptureCallBack? = null
     private var mFrameRate = 0
@@ -156,9 +158,17 @@ class RenderManager(
                 }
             }
             MSG_GL_DRAW -> {
+                if (mReleased) {
+                    return true
+                }
                 //Render camera data to SurfaceTexture
                 //Set the correction matrix of the image at the same time
-                mCameraSurfaceTexture?.updateTexImage()
+                try {
+                    mCameraSurfaceTexture?.updateTexImage()
+                } catch (e: Exception) {
+                    Logger.w(TAG, "updateTexImage failed, skip frame: ${e.message}")
+                    return true
+                }
                 mCameraSurfaceTexture?.getTransformMatrix(mTransformMatrix)
                 mCameraRender?.setTransformMatrix(mTransformMatrix)
                 val textureId = mEOSTextureId?.let { mCameraRender?.drawFrame(it) }
@@ -200,19 +210,27 @@ class RenderManager(
                 }
             }
             MSG_GL_RELEASE -> {
-                EventBus.with<Boolean>(BusKey.KEY_RENDER_READY).postMessage(false)
-                mEffectList.forEach { effect ->
-                    effect.releaseGLES()
-                }
-                mEffectList.clear()
-                mCameraRender?.releaseGLES()
-                mScreenRender?.releaseGLES()
-                mCaptureRender?.releaseGLES()
-                mCameraSurfaceTexture?.setOnFrameAvailableListener(null)
-                mCameraSurfaceTexture = null
+                releaseGlResources()
             }
         }
         return true
+    }
+
+    private fun releaseGlResources() {
+        if (mReleased) {
+            return
+        }
+        mReleased = true
+        EventBus.with<Boolean>(BusKey.KEY_RENDER_READY).postMessage(false)
+        mEffectList.forEach { effect ->
+            effect.releaseGLES()
+        }
+        mEffectList.clear()
+        mCameraRender?.releaseGLES()
+        mScreenRender?.releaseGLES()
+        mCaptureRender?.releaseGLES()
+        mCameraSurfaceTexture?.setOnFrameAvailableListener(null)
+        mCameraSurfaceTexture = null
     }
 
     private fun drawFrame2Capture(fboId: Int) {
@@ -247,6 +265,7 @@ class RenderManager(
      * @param listener acquire camera surface texture, see [CameraSurfaceTextureListener]
      */
     fun startRenderScreen(w: Int, h: Int, outSurface: Surface?, listener: CameraSurfaceTextureListener? = null) {
+        mReleased = false
         mRenderThread = HandlerThread(RENDER_THREAD)
         mRenderThread?.start()
         mRenderHandler = Handler(mRenderThread!!.looper, this@RenderManager)
@@ -271,13 +290,24 @@ class RenderManager(
     }
 
     /**
-     * Stop render screen
+     * Stop render screen. [onStopped] runs after GL resources are released on the render thread.
      */
-    fun stopRenderScreen() {
-        mRenderHandler?.obtainMessage(MSG_GL_RELEASE)?.sendToTarget()
-        mRenderThread?.quitSafely()
-        mRenderThread = null
-        mRenderHandler = null
+    fun stopRenderScreen(onStopped: (() -> Unit)? = null) {
+        val handler = mRenderHandler
+        val thread = mRenderThread
+        if (handler == null) {
+            onStopped?.invoke()
+            return
+        }
+        handler.post {
+            releaseGlResources()
+            thread?.quitSafely()
+            if (mRenderThread === thread) {
+                mRenderThread = null
+                mRenderHandler = null
+            }
+            onStopped?.invoke()
+        }
     }
 
     /**
@@ -356,6 +386,9 @@ class RenderManager(
     }
 
     override fun onFrameAvailable(surfaceTexture: SurfaceTexture?) {
+        if (mReleased) {
+            return
+        }
         emitFrameRate()
         mRenderHandler?.obtainMessage(MSG_GL_DRAW)?.sendToTarget()
     }

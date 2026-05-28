@@ -348,13 +348,7 @@ class MultiCameraClient(ctx: Context, callback: IDeviceConnectCallBack?) {
                     }
                 }
                 MSG_STOP_PREVIEW -> {
-                    closeCameraInternal()
-                    mRenderManager?.getCacheEffectList()?.apply {
-                        mCacheEffectList.clear()
-                        mCacheEffectList.addAll(this)
-                    }
-                    mRenderManager?.stopRenderScreen()
-                    mRenderManager = null
+                    stopPreviewInternal(null)
                 }
                 MSG_CAPTURE_IMAGE -> {
                     (msg.obj as Pair<*, *>).apply {
@@ -662,13 +656,43 @@ class MultiCameraClient(ctx: Context, callback: IDeviceConnectCallBack?) {
         }
 
         /**
-         * Close camera
+         * Close camera. When [onClosed] is provided, it runs on the main thread after
+         * preview/native/GL resources are released on the camera thread.
          */
-        fun closeCamera() {
-            mCameraHandler?.obtainMessage(MSG_STOP_PREVIEW)?.sendToTarget()
-            mCameraThread?.quitSafely()
-            mCameraThread = null
-            mCameraHandler = null
+        fun closeCamera(onClosed: (() -> Unit)? = null) {
+            val handler = mCameraHandler
+            val thread = mCameraThread
+            if (handler == null) {
+                onClosed?.let { mMainHandler.post(it) }
+                return
+            }
+            handler.post {
+                stopPreviewInternal {
+                    thread?.quitSafely()
+                    if (mCameraThread === thread) {
+                        mCameraThread = null
+                        mCameraHandler = null
+                    }
+                    onClosed?.let { cb ->
+                        mMainHandler.postDelayed(cb, USB_SWITCH_SETTLE_MS)
+                    }
+                }
+            }
+        }
+
+        private fun stopPreviewInternal(onStopped: (() -> Unit)? = null) {
+            closeCameraInternal()
+            val renderManager = mRenderManager
+            mRenderManager = null
+            renderManager?.getCacheEffectList()?.apply {
+                mCacheEffectList.clear()
+                mCacheEffectList.addAll(this)
+            }
+            if (renderManager != null) {
+                renderManager.stopRenderScreen(onStopped)
+            } else {
+                onStopped?.invoke()
+            }
         }
 
         /**
@@ -952,45 +976,50 @@ class MultiCameraClient(ctx: Context, callback: IDeviceConnectCallBack?) {
         private const val DEFAULT_PREVIEW_HEIGHT = 480
         const val MAX_NV21_DATA = 5
         const val CAPTURE_TIMES_OUT_SEC = 3L
+        /** USB hub settle time after close before opening another camera (MTK). */
+        private const val USB_SWITCH_SETTLE_MS = 200L
 
         private val sUvcOpenSlotCounter = java.util.concurrent.atomic.AtomicInteger(0)
-        private val sDeviceUvcQuirks = java.util.concurrent.ConcurrentHashMap<Int, Int>()
+        /** deviceId of the camera that opens cleanly at slot 0 with quirks=0 (typically HP). */
+        private val sPrimaryCameraDeviceId = java.util.concurrent.atomic.AtomicInteger(-1)
 
         /**
          * Resolve libuvc quirks when opening a UVC device.
          * - Explicit [CameraRequest.uvcQuirks] always wins.
-         * - Remembered quirks for [deviceId] (from a previous successful open).
          * - 2nd+ concurrent open (slot > 0): MTK platform quirks for SP / second-stream devices.
-         * - 1st concurrent open (slot 0): no quirks, keeps HP-like cameras working.
+         * - slot 0 + non-primary device on MTK: platform quirks (HP->SP switch).
+         * - slot 0 + primary device: no quirks.
          */
         @JvmStatic
         fun resolveUvcQuirks(cameraRequest: CameraRequest?, openSlot: Int, deviceId: Int = -1): Int {
             cameraRequest?.uvcQuirks?.let { return it }
-            if (deviceId >= 0) {
-                sDeviceUvcQuirks[deviceId]?.let { return it }
-            }
             if (openSlot > 0) {
                 return UVCCamera.getRecommendedPlatformQuirks()
+            }
+            if (deviceId >= 0) {
+                val primaryId = sPrimaryCameraDeviceId.get()
+                if (primaryId >= 0 && deviceId != primaryId) {
+                    val platformQuirks = UVCCamera.getRecommendedPlatformQuirks()
+                    if (platformQuirks != 0) {
+                        return platformQuirks
+                    }
+                }
             }
             return 0
         }
 
-        /**
-         * Remember quirks that successfully opened preview for [deviceId].
-         * Used to skip quirks=0 retry when switching back to a device that needs bandwidth fix.
-         */
+        /** Mark HP-like camera after a successful slot-0 open with quirks=0. */
         @JvmStatic
-        fun rememberUvcQuirks(deviceId: Int, quirks: Int) {
-            if (deviceId < 0 || quirks == 0) {
-                return
+        fun markPrimaryCameraIfNeeded(deviceId: Int, quirks: Int, openSlot: Int) {
+            if (deviceId >= 0 && openSlot == 0 && quirks == 0) {
+                sPrimaryCameraDeviceId.set(deviceId)
             }
-            sDeviceUvcQuirks[deviceId] = quirks
         }
 
         @JvmStatic
-        fun clearRememberedUvcQuirks(deviceId: Int) {
-            if (deviceId >= 0) {
-                sDeviceUvcQuirks.remove(deviceId)
+        fun clearPrimaryCameraDevice(deviceId: Int) {
+            if (deviceId >= 0 && sPrimaryCameraDeviceId.get() == deviceId) {
+                sPrimaryCameraDeviceId.set(-1)
             }
         }
 

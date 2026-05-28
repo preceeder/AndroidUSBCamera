@@ -171,7 +171,7 @@ class CameraUvcStrategy(ctx: Context) : ICameraStrategy(ctx) {
                 }
             }
             mUVCCamera?.setFrameCallback(frameCallBack, UVCCamera.PIXEL_FORMAT_YUV420SP)
-            MultiCameraClient.rememberUvcQuirks(device.deviceId, quirks)
+            MultiCameraClient.markPrimaryCameraIfNeeded(device.deviceId, quirks, 0)
             Logger.i(TAG, " createCamera success! request = $request")
         }
         return true
